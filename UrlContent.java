@@ -10,7 +10,7 @@ public class UrlContent{
         int year = 2015;
         
         // make 12 folders for each month
-        for (int month = 1; month <= 4; month++) {
+        for (int month = 5; month <= 12; month++) {
             File directory = new File(String.format("%02d", month));
             if (!directory.exists()){
                 directory.mkdir();

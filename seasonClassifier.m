@@ -1,4 +1,4 @@
-% clear all; close all; clc
+clear all; close all; clc
 
 %% Read in Image Files
 % number of samples (will be later partitioned into training and testing)
@@ -80,7 +80,7 @@ for season = 1 : 4
     end
 end
 
-%% Show Training Data
+%% Classify Seasonal Data
 
 % loop through the 5 testing groups that were shuffled in TrainShuffle and 
 % TestShuffleand project each spectrogram onto the modes from the SVD
@@ -96,7 +96,7 @@ trainError = [];
 testError = [];
 
 % low rank approximation that we chose
-rank = 200;
+rank = 50;
 
 n = size(TestShuffle{1}, 2);
 % the gold standard for what the testing data should actually be classified
